@@ -6,12 +6,15 @@ import android.util.Log
 import com.jw_android.learn_modern_android.R
 import java.util.*
 
+private const val FIRST = 5
+private const val END = 10
+
 class Loop : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_loop)
 
-        map ()
+        loopContinue()
     }
 
     fun inLoop (first : Int , end : Int) {
@@ -86,5 +89,43 @@ class Loop : AppCompatActivity() {
         }.forEach{
                 println("Lenght=$it")
             }
+    }
+
+    fun mWhile() {
+        var i = 0
+
+        // 얘는 조건이 맞으면 실행하는데
+        while (FIRST > i) {
+            i ++
+            println(i)
+        }
+
+        // 얘는 조건이 맞든 안맞든 한번은 실행함.
+        do {
+
+        }while (FIRST > i)
+    }
+
+    fun loopBreak() {
+        for(index in 1..10) {
+
+            if (index > 5) break
+            // index 가 6 일때 == true 일때 루프를 탈출해라
+
+            Log.d("practice0131" , "현재 인덱스는 : $index 입니다.")
+        }
+
+    }
+
+    fun loopContinue() {
+        for(index in 1..10) {
+
+            if (index in 6..7) {
+                continue
+            }
+            // index 6 , 7 일때 다음줄(로그)을 실행하지 마라
+
+            Log.d("practice0131" , "현재 인덱스는 : $index 입니다.")
+        }
     }
 }
