@@ -10,26 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Learnmodernandroid">
         <activity
-            android:name=".basicsyntax.Loop"
+            android:name=".basic.Class"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".basicsyntax.ArrayCollection"
-            android:exported="true">
 
         </activity>
+
+
+        <activity
+            android:name=".basic.Function"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".basic.Loop"
+            android:exported="true" />
+        <activity
+            android:name=".basic.ArrayCollection"
+            android:exported="true" />
         <activity
             android:name=".databinding.DataBindingActivity"
             android:exported="false" />
         <activity
-            android:name=".basicsyntax.BasicSyntax"
+            android:name=".basic.BasicSyntax"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true" />

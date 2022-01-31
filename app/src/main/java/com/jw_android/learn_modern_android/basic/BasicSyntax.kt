@@ -1,10 +1,8 @@
-package com.jw_android.learn_modern_android.basicsyntax
+package com.jw_android.learn_modern_android.basic
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Switch
-import com.jw_android.learn_modern_android.R
 import com.jw_android.learn_modern_android.databinding.ActivityBasicSyntaxBinding
 
 

@@ -1,14 +1,15 @@
-package com.jw_android.learn_modern_android.basicsyntax
+package com.jw_android.learn_modern_android.basic
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.jw_android.learn_modern_android.R
-import java.util.*
 
 class ArrayCollection : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_array_collection)
+
+        // 컬렉션 api 정리해놓은 블로그 : https://0391kjy.tistory.com/38
 
         // 배열 (Array) : 하나의 변수에 여러 개의 정하진 값을 담을 수 있게 해주는 데이터 타입
         // 컬렉션 ( Collection ) : 동적 배열 => list , set , map

@@ -1,4 +1,4 @@
-package com.jw_android.learn_modern_android.basicsyntax
+package com.jw_android.learn_modern_android.basic
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
