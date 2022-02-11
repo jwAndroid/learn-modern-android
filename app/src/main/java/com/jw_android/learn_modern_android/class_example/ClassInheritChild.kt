@@ -1,5 +1,7 @@
 package com.jw_android.learn_modern_android.class_example
 
+import android.util.Log
+
 class ClassInheritChild : ClassInheritance() {
 
 
@@ -12,7 +14,7 @@ class ClassInheritChild : ClassInheritance() {
     }
 
     override fun sayHello() {
-
+        Log.d("ClassInheritChild" ,"안녕하세요!")
     }
 
 
