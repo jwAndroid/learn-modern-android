@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Learnmodernandroid">
         <activity
+            android:name=".basic.NullSafety"
+            android:exported="false" />
+        <activity
             android:name=".basic.ClassInheritance"
             android:exported="false" />
+
         <activity
             android:name=".basic.Class"
             android:exported="true">
@@ -23,7 +27,7 @@
         </activity>
         <activity
             android:name=".basic.Function"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".basic.Loop"
             android:exported="true" />
