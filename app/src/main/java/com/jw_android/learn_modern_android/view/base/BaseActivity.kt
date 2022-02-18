@@ -24,4 +24,5 @@ abstract class BaseActivity<T : ViewDataBinding>(@LayoutRes private val layoutRe
     }
 
 
+
 }
