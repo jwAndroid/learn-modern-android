@@ -6,6 +6,7 @@ import com.jw_android.learn_modern_android.R
 import com.jw_android.learn_modern_android.utils_study.Console
 
 //https://blog.yena.io/studynote/2020/04/15/Kotlin-Scope-Functions.html
+
 class ScopeFunction : AppCompatActivity() {
 
 //    코드를 축약해서 표현해주는것 : 스코프함수

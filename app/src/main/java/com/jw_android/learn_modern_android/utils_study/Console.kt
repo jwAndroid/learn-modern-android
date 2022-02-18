@@ -4,9 +4,14 @@ import android.util.Log
 
 class Console {
     companion object {
-        fun log (what : String?) {
+        fun log (what : Any?) {
             if (what == null) Log.d("ConsoleLog" , "null")
-            else Log.d("ConsoleLog" , what)
+            else Log.d("ConsoleLog" , what.toString())
+        }
+
+        fun prn (what : Any?) {
+            if (what == null) Log.d("ConsoleLog" , "null")
+            else println(what)
         }
     }
 }

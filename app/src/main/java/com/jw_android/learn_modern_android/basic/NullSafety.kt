@@ -10,6 +10,9 @@ class NullSafety : AppCompatActivity() {
 
 //    nullSafety
     private var nullAble : String? = null // null 을 허용한다.
+//    왠만해서 null 을 허용하는건 안쓰는게 좋음
+//    코틀린은 null 을 엄격하게 잡아내는데 개나소나 null 을 모두 허용해버리면 나중에 디버깅 할때
+//    상당히 골치아플수도 있다.
     var notNull : String = "this value must not null" // 반드시 변수에 값을 할당해야한다.
 
 //    lateinit
