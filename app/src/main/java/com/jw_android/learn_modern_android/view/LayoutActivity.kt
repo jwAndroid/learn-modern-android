@@ -28,5 +28,4 @@ class LayoutActivity : BaseActivity<ActivityLayoutBinding>(R.layout.activity_lay
     override fun initData() {
 
     }
-
 }
