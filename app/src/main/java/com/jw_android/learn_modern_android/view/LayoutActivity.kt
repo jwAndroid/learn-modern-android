@@ -10,18 +10,9 @@ class LayoutActivity : BaseActivity<ActivityLayoutBinding>(R.layout.activity_lay
 
     override fun initView() {
 
-            thread(start=true) {
-//                서브 스레드
-                Thread.sleep(3000)
-
-                runOnUiThread {
-//                    UI 와 관련된 모든 코드는 메인 스레드에 있어야함.
-                    binding.apply {
-                        textView.text = "3000L"
-                    }
-                }
-            }
-
+        binding.apply {
+            textView.text = "3000L"
+        }
 
     }
 

@@ -17,12 +17,6 @@ class LearnActivity : AppCompatActivity() {
 
     }
 
-    private fun startActivity(activity :  Class<*>) {
-        val intent = Intent(this@LearnActivity , activity)
-        startActivity(intent)
-        finish()
-    }
-
 //    액티비는 : 기본 컴포넌트 ( 앱을 구성하는 요소 )
 //    브로드캐스트 리시버 : 메세지를 수신하는 컴포넌트
 //    서비스 : 백그라운드 코드 처리를 담당
@@ -56,5 +50,7 @@ class LearnActivity : AppCompatActivity() {
 //    2. 데이터를 담고 타겟을 지정한다.
 //    3. "액티비티 매니저" 에 의해서 지정한 액티비티를 실행시킨다.
 //    4. 타겟 액티비티로 전송후 그쪽에서 받는다.
+
+
 
 }

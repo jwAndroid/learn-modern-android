@@ -1,5 +1,7 @@
 package com.jw_android.learn_modern_android.view.base
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +10,9 @@ import androidx.databinding.ViewDataBinding
 import com.jw_android.learn_modern_android.R
 import com.jw_android.learn_modern_android.databinding.ActivityLayoutBinding
 
-abstract class BaseActivity<T : ViewDataBinding>(@LayoutRes private val layoutResId: Int) : AppCompatActivity() {
+abstract class BaseActivity<T : ViewDataBinding>(@LayoutRes
+                                                 private val layoutResId: Int
+                                                 ) : AppCompatActivity() {
 
 //    TODO : BaseViewModel ,
 
@@ -26,8 +30,10 @@ abstract class BaseActivity<T : ViewDataBinding>(@LayoutRes private val layoutRe
         initData()
     }
 
-    open fun add () {
-
+    open fun startActivity(context : Context, activity :  Class<*>) {
+        val intent = Intent(context , activity)
+        startActivity(intent)
+        finish()
     }
 
 }
