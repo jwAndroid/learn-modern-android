@@ -9,9 +9,9 @@ class ArrayCollection : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_array_collection)
 
-        // 컬렉션 api 정리해놓은 블로그 : https://0391kjy.tistory.com/38
+        // 컬렉션 정리해놓은 블로그 : https://0391kjy.tistory.com/38
 
-        // 배열 (Array) : 하나의 변수에 여러 개의 정하진 값을 담을 수 있게 해주는 데이터 타입
+        // 배열 (Array) : 하나의 변수에 여러 개의 정해진 값을 담을 수 있게 해주는 데이터 타입
         // 컬렉션 ( Collection ) : 동적 배열 => list , set , map
         // 뮤터블 ( Mutable ) : 입력된 값을 변경 할 수 있는 배열
         // 셋 ( Set ) : 중복된 요소를 허용 안하는 배열
@@ -36,13 +36,12 @@ class ArrayCollection : AppCompatActivity() {
         mList.add("5") // 추가 C
         mList[2] // 읽기 R
         mList[3] = "45" // 수정 U
-        mList.removeAt(0) // 삭제 D ex => [1,2,3,4,5] => removeAt(1) => [1,3,4,5]
+        mList.removeAt(0) // 삭제 D
 
         val genMutableList = mutableListOf<String>()
         genMutableList.add("하나")
         genMutableList.add("둘")
         genMutableList.add("셋")
-
 
     }
 
@@ -89,6 +88,9 @@ class ArrayCollection : AppCompatActivity() {
         println(setList)
 
         setList.remove(2)
+//        removeAt != remove
+//        remove : element
+//        removeAt : index
         println(setList)
     }
 

@@ -4,16 +4,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import com.jw_android.learn_modern_android.databinding.ActivityBasicSyntaxBinding
+import com.jw_android.learn_modern_android.utils_study.Console
 
 
 private const val IMCONST = "저는 상수입니다"
 
 class BasicSyntax : AppCompatActivity() {
 
-    private val nullAbleReadOnlyValue : String? = null // 거의 가장 많이씀
-    private lateinit var lateInitValue : String // VIEW MODEL 사용할때?
-    var x : Int = 10
-    val readOnlyValue = 5 // 코틀린은 타입생략가능
+//    val 은 런타임 시점, const val 은 컴파일 시점에 값이 할당되는 것이다.
+//    컴파일 : 소스코드 -> 바이너리 코드
+//    런타임 : 컴파일 되어 동작할때
+//    컴파일 -> 런타임
+//    const val -> val
+
+    private val nullAbleReadOnlyValue : String? = null // null 을 허용하는 선언
+    private lateinit var lateInitValue : String // 지연 선언법
+    var x : Int = 10 // 일반적인 선언법
+    val readOnlyValue = 10 // 타입생략 선업법
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,22 +41,24 @@ class BasicSyntax : AppCompatActivity() {
 //        else if 는 앞의 조건이 만족하면 탈출한다.
 //        (!x) 에서 x가 false가 맞냐를 물어보는것이다. -> x = false 이면 if문 실행한다는것
 
+        when(x) {
+            true -> {}
+            false -> {}
+            else -> {}
+        }
+
         if (x){
             Log.d("practice0130" , "x가 true")
-
         } else if(x) {
             Log.d("practice0130" , "else if 에서 x가 true")
-
         } else if(x) {
             Log.d("practice0130" , "else if2 에서 x가 true")
-
         } else {
             Log.d("practice0130" , "위 모든식이 실행된게 없을때?")
         }
 
     }
 
-    //*
     fun condition2() {
         val a = 5
         val b = 3
@@ -58,6 +67,7 @@ class BasicSyntax : AppCompatActivity() {
         val y = 20
 
         val bigger = if (a > b && false) a else b
+
         Log.d("practice0130" , "$bigger")
 
         val bigger2 = if (x > y) {
@@ -76,6 +86,7 @@ class BasicSyntax : AppCompatActivity() {
     // 함수는 하나의 기능만 있는게 맞음. >> 함수의 원시성 이라함
 
     fun conditionWhen(x : Int?) : String {
+
         return when(x) {
             1 -> "1"
             2 -> "2"

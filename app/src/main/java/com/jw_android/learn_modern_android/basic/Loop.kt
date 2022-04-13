@@ -18,8 +18,10 @@ class Loop : AppCompatActivity() {
     }
 
     fun inLoop (first : Int , end : Int) {
-        for (index in first .. end) {
-            Log.d("practice0131" , index.toString())
+        if(first > end) {
+            for (i in first .. end) {
+                Log.d("practice0131" , i.toString())
+            }
         }
         // 같은말
 //        for (int i = 0 , i >= 10 , i++) {
@@ -61,7 +63,9 @@ class Loop : AppCompatActivity() {
 //            Log.d("practice0131" , "{index : $index value : $list}")
 //        }
 
-       val result =  mList.map { it.uppercase(Locale.getDefault()) }
+       val result =  mList.map { it ->
+          it.uppercase(Locale.getDefault())
+       }
         Log.d("practice0131" , result.toString())
     }
 
@@ -78,17 +82,9 @@ class Loop : AppCompatActivity() {
     fun map2 () {
         val names= listOf("James", "Duke", "Sara", "Mino")
 
-        names.map {
-                name -> name.uppercase()
-        }.forEach{
-                println(it)
-            }
+        names.map { it.uppercase() }.forEach{ println(it) }
 
-        names.map {
-                name -> name.length
-        }.forEach{
-                println("Lenght=$it")
-            }
+        names.map { it.length }.forEach{ println("Length=$it") }
     }
 
     fun mWhile() {

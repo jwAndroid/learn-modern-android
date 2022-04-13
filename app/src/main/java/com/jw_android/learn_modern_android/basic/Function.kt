@@ -41,9 +41,10 @@ class Function : AppCompatActivity() {
     }
 
     fun ex1 (x : Int) : Int{
-        var result = 0
-        for (index in 0..x) result += index
-        return result
+        var sum = 0
+
+        for (i in 0..x) sum += i
+        return sum
     }
 
 }

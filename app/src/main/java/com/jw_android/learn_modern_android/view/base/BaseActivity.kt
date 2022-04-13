@@ -10,16 +10,11 @@ import androidx.databinding.ViewDataBinding
 import com.jw_android.learn_modern_android.R
 import com.jw_android.learn_modern_android.databinding.ActivityLayoutBinding
 
-abstract class BaseActivity<T : ViewDataBinding>(@LayoutRes
-                                                 private val layoutResId: Int
-                                                 ) : AppCompatActivity() {
-
-//    TODO : BaseViewModel ,
+abstract class BaseActivity<T : ViewDataBinding>(@LayoutRes private val layoutResId: Int) : AppCompatActivity() {
 
     protected abstract fun initView()
     protected abstract fun initData()
 
-//    lazy 로 사용해도 된다. 책에서봄
     protected val binding : T by lazy {
         DataBindingUtil.setContentView(this , R.layout.activity_layout)
     }
