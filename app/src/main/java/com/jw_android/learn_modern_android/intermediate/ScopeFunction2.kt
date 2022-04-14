@@ -17,7 +17,16 @@ import com.jw_android.learn_modern_android.utils_study.Console
 // let , it , run
 // 마지막에 it , this , this 를 사용하여 새로운 객체반환
 
+// 느낌표두개(!!) : NULL이 될 수 있는 타입의 변수이지만, 현재 NULL이 아님을 주장할 수 있다.
+// var a:Int = null -> error
+//var a:Int? = null
+//var b:Int? = 10
+// var c:Int = b  -> error
+//var c:Int = b!!
+
 data class Person (var name : String?)
+
+data class Me(var name : String? , var age : Int?)
 
 data class Car (var name : String? , var price : Int)
 
@@ -27,6 +36,7 @@ class ScopeFunction2 : AppCompatActivity() {
 
     private val person = Person("")
     private val myCar = Car("페라리" , 2800)
+    private val myself = Me("null" , null)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,14 +68,15 @@ class ScopeFunction2 : AppCompatActivity() {
         val resultStr = person.let {
             it.name = "문자열 반환"
 
-            val emt: String = it.name!!
-            "{문자열 $emt 반환}"
+//            val emt = it.name!!
+//            !! == non-nullable
+            "{문자열 ${it.name} 반환}"
         }
 
         // 아무것도 반환하지 않을때
         // 단 , 객체의 name 은 변경됨
         val resultUnit = person.let {
-            it.name = "아무것도 반화되는게 없다."
+            it.name = "값만 변하고 아무것도 반환되는게 없다."
         }
 
         val nameStr = nullablePerson?.let { it.name } ?: "Default name"
@@ -89,9 +100,10 @@ class ScopeFunction2 : AppCompatActivity() {
             // 우리가 원하는 새로운 객체를 반환하려면?
         }
 
+        val newValue = "안녕하세요~"
         // 이렇게 this 를 사용하여 반환해야한다.
         val obj : Person = with(person) {
-            name = "with 를 사용한 이름"
+            name = newValue
             this
         }
 
@@ -108,9 +120,12 @@ class ScopeFunction2 : AppCompatActivity() {
 //        fun <T, R> T.run(block: T.() -> R): R
 //        run 은 non-null 인 객체에 대한 확장함수 이다.
 //        계산할때 많이쓴다.
+//        맨 마지막 값을 반환한다.
 
         val getPrice = myCar.run {
+            price = 99999
             ++price
+            price + 5
         }
 
         Console.log(getPrice.toString())
@@ -133,7 +148,6 @@ class ScopeFunction2 : AppCompatActivity() {
 
     fun scopeApply () {
 //        fun <T> T.apply(block: T.() -> Unit): T
-
 //        가장 많이 쓸것으로 예상함.
 
 //        apply 는 블록 안에서 객체의 프로퍼티를 호출 할 때 it , this 를 사용할 필요도 없으며
@@ -145,8 +159,13 @@ class ScopeFunction2 : AppCompatActivity() {
         val result = person.apply {
             name = "어플라이 사용!"
         }
-
         Console.log(result.toString())
+
+        val me = myself.apply {
+            name = "최지웅"
+            age = 28
+        }
+        Console.log(me.toString())
     }
 
     fun scopeAlso () {

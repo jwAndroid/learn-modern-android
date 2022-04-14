@@ -1,25 +1,42 @@
 package com.jw_android.learn_modern_android.intermediate
 
 import com.jw_android.learn_modern_android.utils_study.Console
+import java.util.*
 
 // 스트림 함수 ref : https://bb-library.tistory.com/145
 // 스트림 함수 ref : https://leveloper.tistory.com/134
 
 const val ZERO = 0
+
 data class Chat (var message : String? , var id : Int)
 
 class StreamFunction {
 
     private val cities = mutableListOf("Seoul", "Tokyo", "New york" , "C" , "asdasdasd" , "A")
     private val newCities = mutableListOf("Seoul", "Tokyo", "Mountain View" , "Mountain Siew", "Seoul","London" , "Tokyo ")
+    private val orderBy = mutableListOf(
+        Chat("hi" ,123),
+        Chat("hi jw" ,23),
+        Chat("android good" ,254),
+        Chat("android 12312" ,23),
+        Chat("android developer jw" ,1)
+    )
+
 
     init {
+        sortOrderBy()
+    }
 
+    private fun sortOrderBy() {
+       val result = orderBy.sortedByDescending { it.id }.apply {
+           this[2].message = "바꿨어!!"
+       }
+        Console.log(result.toString())
     }
 
     private fun map () {
 
-        val chats = mutableListOf<Chat>(
+        val chats = mutableListOf(
             Chat("hi" ,1),
             Chat("hi jw" ,2),
             Chat("android good" ,3)
@@ -31,6 +48,7 @@ class StreamFunction {
 
         Console.log(updateChat.toString())
     }
+
     private fun mapNotnull() {
         val result = cities.mapNotNull { city ->
             if(city.length > 5) city else null
@@ -121,7 +139,6 @@ class StreamFunction {
     }
 
     private fun distinct() {
-
 //        distinct() 함수는 컬렉션 내의 모든 중복을 제거한 결과를 반환한다.
 //        중복 여부는 equals()를 통해 확인한다.
 //        distinctBy()를 통해 비교에 사용할 키 값을 직접 설정하는 것도 가능하다.
