@@ -79,11 +79,7 @@ class ScopeFunction : AppCompatActivity() {
 
         Console.log(obj.toString())
     }
-
-
-
 }
-
 
 data class RunTestObject(var name : String , var age : Int) {
     override fun toString(): String {

@@ -16,7 +16,7 @@ abstract class BaseActivity<T : ViewDataBinding>(@LayoutRes private val layoutRe
     protected abstract fun initData()
 
     protected val binding : T by lazy {
-        DataBindingUtil.setContentView(this , R.layout.activity_layout)
+        DataBindingUtil.setContentView(this , layoutResId)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

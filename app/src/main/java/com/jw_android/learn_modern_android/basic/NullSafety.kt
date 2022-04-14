@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.jw_android.learn_modern_android.R
 import com.jw_android.learn_modern_android.utils_study.Console
+import kotlin.reflect.jvm.reflect
 
 class NullSafety : AppCompatActivity() {
 
 //    nullSafety
-    private var nullAble : String? = null // null 을 허용한다.
+    private var nullable : String? = null // null 을 허용한다.
 //    왠만해서 null 을 허용하는건 안쓰는게 좋음
 //    코틀린은 null 을 엄격하게 잡아내는데 개나소나 null 을 모두 허용해버리면 나중에 디버깅 할때
 //    상당히 골치아플수도 있다.
@@ -20,7 +21,7 @@ class NullSafety : AppCompatActivity() {
 //    var로 선언된 클래스의 프로퍼티(name) 에만 사용가능하다
 //    null은 허용되지 않는다 == name 은 null 이 아니다. lateinit 쓴다해서 기본값이 있는게 아님.
 //    기본 자료형은 사용할수 없다. int 등..
-//    변수가 초기화되지 않은 상황이 발생할수있다면 nullAble ( asd : Type? = null ) or
+//    변수가 초기화되지 않은 상황이 발생할 수 있다면 nullable ( asd : Type? = null ) or
     //    빈 값으로 초기화 하는것이 좋다.
 
     private val job : String by lazy {
@@ -40,7 +41,7 @@ class NullSafety : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_null_safety)
 
-        val result = safeCall(null)
+        Console.log(safeCall("aseg"))
 
 //        Console.log(name)
 //        UninitializedPropertyAccessException ==> name 은 반드시 초기화 시켜야한다.
@@ -49,19 +50,19 @@ class NullSafety : AppCompatActivity() {
 //        ::name.get()
 
         if (::name.isInitialized){
-//            세미콜론 두개로 isInitialized 되었는지 방지할수있다.
+//    세미콜론 두개로 isInitialized 되었는지 방지할수있다.
 //    더블콜론 (리플렉션) 은 변수에 대한 속성을 참조할 수 있고 , :: 을 명시하면
 //    변수가 아닌 객체로 참조할 수 있게 된다.
 //    함수내부 스코프에서 사용하면 안된다. 전역필드에서 써야한다.
 
-            Console.log(name)
+//            Console.log(::name)
         }
 
     }
 
    private fun nullParameter (str : String?) {
         if (str == null) {
-            Console.log(str)
+            Console.log(null)
         }
     }
 
@@ -75,13 +76,13 @@ class NullSafety : AppCompatActivity() {
 
 //        변수?.fun() => 해당값 리턴
 //        null?.fun() => null 리턴
-
         return str?.length.toString()
+//        return str ?: "asd"
     }
 
-    private fun elvisOperator (str : String?):Int {
-        return str?.length?:10
-//        세이프 콜이랑은 반대로 ?. 는 무조건 앞에가 null 이면 null 을 반환하는데
+    private fun elvisOperator (str : String?) : Int {
+        return str?.length ?: 10
+//        세이프 콜이랑은 반대로 ?. 는앞에가 null 이면 null 을 반환하는데
 //        ?: 는 앞에가 널이면 이렇게 초기값(정해준값)을 반환한다.
 
     }

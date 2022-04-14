@@ -1,8 +1,7 @@
 package com.jw_android.learn_modern_android.intermediate
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.jw_android.learn_modern_android.R
 import com.jw_android.learn_modern_android.utils_study.Console
 

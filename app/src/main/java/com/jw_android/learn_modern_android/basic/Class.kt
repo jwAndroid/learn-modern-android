@@ -31,11 +31,9 @@ class Class : AppCompatActivity() {
     }
 
     fun useClass () {
-
         val primaryConstructor = PrimaryConstructor("클래스 연습" , 16)
         primaryConstructor.run()
-        val asd = SecondaryConstructor("클래스 연습1")
-
+        val asd = SecondaryConstructor(12, "asd")
     }
 
     fun getPersonInstance () {
@@ -53,6 +51,7 @@ class Class : AppCompatActivity() {
 //        이렇게 컴페니언 옵젝은 클래스인데 인스턴스를 만들지않고 바로 호출가능.
         CompanionObject.mPrint()
 
+        //클래스명.~
 //        반대로
 //        밖에있는 walk() 는 인스턴스 생성후 호출해야함.
         val companionObject = CompanionObject()
@@ -66,7 +65,7 @@ class Class : AppCompatActivity() {
     }
 
     fun extends() {
-        ClassInheritChild().openValue
+        var test = ClassInheritChild().openValue
     }
 
 }
