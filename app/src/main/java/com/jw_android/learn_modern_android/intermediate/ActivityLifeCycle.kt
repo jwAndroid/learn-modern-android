@@ -16,7 +16,6 @@ class ActivityLifeCycle : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_life_sycle)
 
-
         /*  액티비티의 생명주기
         * onCreate() - 만들어짐 - 액티비티 생성
         * onStart() - 화면에 나타남 - 화면이 보이기 시작하는 단계
@@ -53,7 +52,7 @@ class ActivityLifeCycle : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-//        화면에 나타남 , 현재 앱이 실행되는중
+//        화면에 나타남 , 현재 앱이 실행되는중 런타임 환경
         Console.log("onResume")
     }
 
@@ -71,7 +70,7 @@ class ActivityLifeCycle : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-//        이 액티비티가 종료된 상
+//        이 액티비티가 종료된 상태
         Console.log("onDestroy")
     }
 

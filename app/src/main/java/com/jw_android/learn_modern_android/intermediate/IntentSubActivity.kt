@@ -18,18 +18,19 @@ class IntentSubActivity : AppCompatActivity() {
         val editText = findViewById<EditText>(R.id.editText)
         val button = findViewById<Button>(R.id.button)
 
-        intent.getStringExtra("key").let {
+        intent.getStringExtra("key")?.let {
             editText.setText(it)
         }
 
         button.setOnClickListener {
             val intent = Intent(this , IntentStudy::class.java)
             intent.putExtra(REGISTER_KEY , editText.text.toString())
-            setResult(RESULT_OK , intent)
+            setResult(RESULT_OK, intent)
             finish()
         }
 
-        val strings : Editable = editText.text
-
     }
 }
+
+//    만약 객체를 넘기고 싶다면
+//    받는쪽에서 val pathData = intent.getSerializableExtra("path") as Path (객체명 타입으로 캐스팅)
