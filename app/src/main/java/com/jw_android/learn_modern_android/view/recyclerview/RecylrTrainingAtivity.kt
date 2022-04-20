@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.jw_android.learn_modern_android.R
+import com.jw_android.learn_modern_android.utils_study.Console
 
 class RecylrTrainingAtivity : AppCompatActivity() {
 
