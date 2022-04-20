@@ -11,11 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Learnmodernandroid">
         <activity
-            android:name=".view.recyclerview.SpinnerActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.recyclerview.RecylrTrainingAtivity"
-            android:exported="true">
+            android:name=".view.fragment.LoadFragmentActivity"
+            android:exported="false" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,8 +20,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".view.recyclerview.SpinnerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.recyclerview.RecylrTrainingAtivity"
+            android:exported="true">
+        </activity>
+        <activity
             android:name=".intermediate.Task"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".view.TestActivity"
             android:exported="false" />
