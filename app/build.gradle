@@ -51,7 +51,10 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation "org.jetbrains.kotlin:kotlin-reflect:1.6.10"
 
-    //register registerForActivityResult
-//    implementation "androidx.activity:activity-ktx:$dependency_version"
-//    implementation "androidx.fragment:fragment-ktx:$dependency_version"
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation 'me.relex:circleindicator:2.1.4'
+
+//  registerForActivityResult
+    implementation "androidx.activity:activity-ktx:$dependency_version"
+    implementation "androidx.fragment:fragment-ktx:$dependency_version"
 }

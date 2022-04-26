@@ -20,7 +20,7 @@ class Fragment1 : BaseFragment<Fragment1Binding>(R.layout.fragment_1) {
 
     override fun initView() {
         binding.apply {
-            fragment1Textview.text = "안녕하세요 프래그먼트 1 입니다."
+            fragment1Textview.text = "fragment1"
         }
 
         arguments.apply {
