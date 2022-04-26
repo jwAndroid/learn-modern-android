@@ -36,6 +36,7 @@ abstract class BaseActivity<T : ViewDataBinding>(@LayoutRes private val layoutRe
     open fun loadFragment(tag: String, fragment: Fragment, layoutResId: Int) {
         val manager = supportFragmentManager
         val ft = manager.beginTransaction()
+        ft.addToBackStack(tag)
 
         manager.findFragmentByTag(tag) ?: ft.add(layoutResId, fragment, tag)
 

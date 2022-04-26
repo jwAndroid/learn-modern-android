@@ -14,10 +14,11 @@ class LoadFragmentActivity : BaseActivity<ActivityLoadFragmentBinding>(R.layout.
     private val layoutResId = R.id.frame_container
 
     override fun initView() {
+
         binding.apply {
             btnFragment1.setOnSingleClickListener {
                 Console.log("1 click")
-                loadFragment(TAG_FRAGMENT1, Fragment1(), layoutResId)
+                loadFragment(TAG_FRAGMENT1, Fragment1.getInstance("1번"), layoutResId)
             }
 
             btnFragment2.setOnSingleClickListener {
@@ -31,7 +32,7 @@ class LoadFragmentActivity : BaseActivity<ActivityLoadFragmentBinding>(R.layout.
             }
         }
 
-        loadFragment(TAG_FRAGMENT1, Fragment1(), R.id.frame_container)
+        loadFragment(TAG_FRAGMENT1, Fragment1.getInstance("1번 이요~"), R.id.frame_container)
 
     }
 

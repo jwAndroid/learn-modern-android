@@ -1,5 +1,6 @@
 package com.jw_android.learn_modern_android.view.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -35,5 +36,9 @@ abstract class BaseFragment<T : ViewDataBinding>(@LayoutRes private val layoutRe
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
     }
 }
