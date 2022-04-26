@@ -11,23 +11,23 @@ import com.jw_android.learn_modern_android.view.base.BaseActivity
 
 class LoadFragmentActivity : BaseActivity<ActivityLoadFragmentBinding>(R.layout.activity_load_fragment) {
 
-    private val thisFragmentRootIdRes = R.id.frame_container
+    private val layoutResId = R.id.frame_container
 
     override fun initView() {
         binding.apply {
             btnFragment1.setOnSingleClickListener {
                 Console.log("1 click")
-                loadFragment(TAG_FRAGMENT1, Fragment1(), thisFragmentRootIdRes)
+                loadFragment(TAG_FRAGMENT1, Fragment1(), layoutResId)
             }
 
             btnFragment2.setOnSingleClickListener {
                 Console.log("2 click")
-                loadFragment(TAG_FRAGMENT2, Fragment2() , thisFragmentRootIdRes)
+                loadFragment(TAG_FRAGMENT2, Fragment2() , layoutResId)
             }
 
             btnFragment3.setOnSingleClickListener {
                 Console.log("3 click")
-                loadFragment(TAG_FRAGMENT3, Fragment3() ,thisFragmentRootIdRes)
+                loadFragment(TAG_FRAGMENT3, Fragment3() ,layoutResId)
             }
         }
 
