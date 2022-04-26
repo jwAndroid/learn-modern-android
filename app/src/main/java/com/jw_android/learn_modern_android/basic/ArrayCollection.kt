@@ -1,13 +1,6 @@
 package com.jw_android.learn_modern_android.basic
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.jw_android.learn_modern_android.R
-
-class ArrayCollection : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_array_collection)
+class ArrayCollection {
 
         // 컬렉션 정리해놓은 블로그 : https://0391kjy.tistory.com/38
 
@@ -16,7 +9,7 @@ class ArrayCollection : AppCompatActivity() {
         // 뮤터블 ( Mutable ) : 입력된 값을 변경 할 수 있는 배열
         // 셋 ( Set ) : 중복된 요소를 허용 안하는 배열
         // 맵 ( Map ) : 키 , 값 으로 이루어진 배열
-    }
+
 
     fun array () {
         val intArray = IntArray(4)

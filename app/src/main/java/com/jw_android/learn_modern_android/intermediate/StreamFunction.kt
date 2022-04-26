@@ -1,7 +1,6 @@
 package com.jw_android.learn_modern_android.intermediate
 
 import com.jw_android.learn_modern_android.utils_study.Console
-import java.util.*
 
 // 스트림 함수 ref : https://bb-library.tistory.com/145
 // 스트림 함수 ref : https://leveloper.tistory.com/134

@@ -1,15 +1,12 @@
 package com.jw_android.learn_modern_android.basic
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.jw_android.learn_modern_android.class_example.*
 import com.jw_android.learn_modern_android.class_example.Class
 
 class Class : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
         // 클래스 호출이 아닌 생성자 호출이다. 애초에 클래스는 호출하는게 아니다.
         // 생성자로부터 클래스의 속성 및 기능을 쓰는것
@@ -26,9 +23,8 @@ class Class : AppCompatActivity() {
        * internal 같은 모듈에 있는 파일만 접근가능
         * protected private 과 같으니 상속 관계에서 접근가능
         * */
-        getDataClass ()
 
-    }
+
 
     fun useClass () {
         val primaryConstructor = PrimaryConstructor("클래스 연습" , 16)

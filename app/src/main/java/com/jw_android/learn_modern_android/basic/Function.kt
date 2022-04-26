@@ -1,23 +1,11 @@
 package com.jw_android.learn_modern_android.basic
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.util.Log
-import com.jw_android.learn_modern_android.R
 
-class Function : AppCompatActivity() {
+class Function {
 
     // 함수의 파라미터는 모두 읽기전용인 val 이 생략된것이다.
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_function)
-
-       val result =  ex1(10)
-
-        Log.d("0131new" , result.toString())
-
-    }
 
     fun functionType1 (str : String) : String {
 //        반환값과 타입이 있는 함수

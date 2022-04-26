@@ -45,9 +45,6 @@
             android:name=".intermediate.IntentStudy"
             android:exported="true" />
         <activity
-            android:name=".intermediate.LearnActivity"
-            android:exported="true" />
-        <activity
             android:name=".view.base.BaseActivity"
             android:exported="false"
             tools:ignore="Instantiatable" />
@@ -55,32 +52,11 @@
             android:name=".view.LayoutActivity"
             android:exported="true" />
         <activity
-            android:name=".intermediate.ScopeFunction2"
-            android:exported="true" />
-        <activity
-            android:name=".intermediate.ScopeFunction"
-            android:exported="true" />
-        <activity
-            android:name=".basic.NullSafety"
-            android:exported="true" />
-        <activity
             android:name=".basic.Class"
-            android:exported="true" />
-        <activity
-            android:name=".basic.Function"
-            android:exported="true" />
-        <activity
-            android:name=".basic.Loop"
-            android:exported="true" />
-        <activity
-            android:name=".basic.ArrayCollection"
             android:exported="true" />
         <activity
             android:name=".databinding.DataBindingActivity"
             android:exported="false" />
-        <activity
-            android:name=".basic.BasicSyntax"
-            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />

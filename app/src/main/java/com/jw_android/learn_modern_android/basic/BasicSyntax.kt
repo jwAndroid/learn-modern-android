@@ -1,15 +1,11 @@
 package com.jw_android.learn_modern_android.basic
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.util.Log
-import com.jw_android.learn_modern_android.databinding.ActivityBasicSyntaxBinding
-import com.jw_android.learn_modern_android.utils_study.Console
 
 
 private const val IMCONST = "저는 상수입니다"
 
-class BasicSyntax : AppCompatActivity() {
+class BasicSyntax {
 
 //    val 은 런타임 시점, const val 은 컴파일 시점에 값이 할당되는 것이다.
 //    컴파일 : 소스코드 -> 바이너리 코드
@@ -21,14 +17,6 @@ class BasicSyntax : AppCompatActivity() {
     private lateinit var lateInitValue : String // 지연 선언법
     var x : Int = 10 // 일반적인 선언법
     val readOnlyValue = 10 // 타입생략 선업법
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        val binding = ActivityBasicSyntaxBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-    }
 
     fun condition () {
         val x = true

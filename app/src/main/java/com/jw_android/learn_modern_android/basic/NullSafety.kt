@@ -1,13 +1,8 @@
 package com.jw_android.learn_modern_android.basic
 
-import android.app.Person
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.jw_android.learn_modern_android.R
 import com.jw_android.learn_modern_android.utils_study.Console
-import kotlin.reflect.jvm.reflect
 
-class NullSafety : AppCompatActivity() {
+class NullSafety{
 
 //    nullSafety
     private var nullable : String? = null // null 을 허용한다.
@@ -36,29 +31,24 @@ class NullSafety : AppCompatActivity() {
 //    타입을 추론 가능하기떄문에 타입생략이 가능하다.
 
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_null_safety)
-
-        Console.log(safeCall("aseg"))
+//        Console.log(safeCall("aseg"))
 
 //        Console.log(name)
 //        UninitializedPropertyAccessException ==> name 은 반드시 초기화 시켜야한다.
 
-        name = "asd"
+//        name = "asd"
 //        ::name.get()
 
-        if (::name.isInitialized){
+//        if (::name.isInitialized){
 //    세미콜론 두개로 isInitialized 되었는지 방지할수있다.
 //    더블콜론 (리플렉션) 은 변수에 대한 속성을 참조할 수 있고 , :: 을 명시하면
 //    변수가 아닌 객체로 참조할 수 있게 된다.
 //    함수내부 스코프에서 사용하면 안된다. 전역필드에서 써야한다.
 
 //            Console.log(::name)
-        }
+//        }
 
-    }
+
 
    private fun nullParameter (str : String?) {
         if (str == null) {

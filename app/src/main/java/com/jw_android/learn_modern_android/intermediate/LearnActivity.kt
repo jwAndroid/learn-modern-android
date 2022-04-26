@@ -1,21 +1,6 @@
 package com.jw_android.learn_modern_android.intermediate
 
-import android.app.Activity
-import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.jw_android.learn_modern_android.MainActivity
-import com.jw_android.learn_modern_android.R
-import kotlin.concurrent.thread
-
-class LearnActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_learn)
-
-    }
+class LearnActivity {
 
 //    액티비는 : 기본 컴포넌트 ( 앱을 구성하는 요소 )
 //    브로드캐스트 리시버 : 메세지를 수신하는 컴포넌트

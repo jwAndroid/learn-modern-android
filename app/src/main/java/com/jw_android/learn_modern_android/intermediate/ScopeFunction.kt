@@ -1,13 +1,10 @@
 package com.jw_android.learn_modern_android.intermediate
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.jw_android.learn_modern_android.R
 import com.jw_android.learn_modern_android.utils_study.Console
 
 //https://blog.yena.io/studynote/2020/04/15/Kotlin-Scope-Functions.html
 
-class ScopeFunction : AppCompatActivity() {
+class ScopeFunction {
 
 //    코드를 축약해서 표현해주는것 : 스코프함수
 //    run , let , apply , with , also
@@ -24,13 +21,6 @@ class ScopeFunction : AppCompatActivity() {
     *    }
     *
     * */
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_scope_function)
-
-
-    }
 
     private fun scopeFunctionRun () {
 //        run {} 중괄호 안 스코프 함수 내부에서 호출한 대상을 this 로 사용가능하다

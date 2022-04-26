@@ -1,22 +1,12 @@
 package com.jw_android.learn_modern_android.basic
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.util.Log
-import com.jw_android.learn_modern_android.R
 import java.util.*
 
 private const val FIRST = 5
 private const val END = 10
 
-class Loop : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_loop)
-
-        loopContinue()
-    }
-
+class Loop {
     fun inLoop (first : Int , end : Int) {
         if(first > end) {
             for (i in first .. end) {

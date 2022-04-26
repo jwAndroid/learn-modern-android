@@ -1,8 +1,5 @@
 package com.jw_android.learn_modern_android.intermediate
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import com.jw_android.learn_modern_android.R
 import com.jw_android.learn_modern_android.utils_study.Console
 
 // 확장함수 ( run , let , apply , with , also ) 는 이걸 외운다기보다는
@@ -30,7 +27,7 @@ data class Me(var name : String? , var age : Int?)
 
 data class Car (var name : String? , var price : Int)
 
-class ScopeFunction2 : AppCompatActivity() {
+class ScopeFunction2 {
 
     private var nullablePerson : Person? = null
 
@@ -38,12 +35,6 @@ class ScopeFunction2 : AppCompatActivity() {
     private val myCar = Car("페라리" , 2800)
     private val myself = Me("null" , null)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_scope_function2)
-
-        StreamFunction()
-    }
 
     fun legacy () {
         // 레거시한 방법

@@ -1,6 +1,5 @@
 package com.jw_android.learn_modern_android.view.fragment
 
-import androidx.core.view.ViewCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.jw_android.learn_modern_android.R
 import com.jw_android.learn_modern_android.databinding.ActivityViewpagerBinding

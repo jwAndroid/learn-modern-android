@@ -1,10 +1,8 @@
 package com.jw_android.learn_modern_android
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.jw_android.learn_modern_android.databinding.ActivityMainBinding
-import com.jw_android.learn_modern_android.utils_study.Console
 
 class MainActivity : AppCompatActivity() {
 

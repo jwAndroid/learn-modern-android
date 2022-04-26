@@ -1,6 +1,5 @@
 package com.jw_android.learn_modern_android.view
 
-import android.content.Intent
 import com.jw_android.learn_modern_android.R
 import com.jw_android.learn_modern_android.databinding.ActivityLayoutBinding
 import com.jw_android.learn_modern_android.view.base.BaseActivity
